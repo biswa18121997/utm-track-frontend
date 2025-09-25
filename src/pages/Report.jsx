@@ -5,7 +5,7 @@ export default function Report() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8086/api/report")
+    fetch(`${import.meta.env.BASE_URL_PROD}/api/report`)
       .then((res) => res.json())
       .then((data) => {
         setRows(data.rows || []);
