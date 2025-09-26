@@ -10,7 +10,7 @@ export default function CreateCampaign() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch(`${import.meta.env.BASE_URL_PROD}/api/campaign/create`, {
+      const res = await fetch(`https://utm-track-backend.onrender.com/api/campaign/create`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
