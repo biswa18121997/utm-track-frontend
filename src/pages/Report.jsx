@@ -6,7 +6,7 @@ export default function Report() {
   const [openCampaign, setOpenCampaign] = useState(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/report`)
+    fetch(`https://utm-track-backend.onrender.com/api/report`)
       .then((res) => res.json())
       .then((data) => {
         setRows(data.rows || []);
